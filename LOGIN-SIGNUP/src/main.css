@@ -33,6 +33,10 @@ body{
     
 }
 
+.form--hidden{
+    display: none;
+}
+
 .form > *:first-child{
     margin-top: 0;
 }
@@ -93,6 +97,7 @@ body{
 }
 
 .form__button{
+    margin-bottom: 1rem;
     width: 100%;
     padding: 1rem 2rem;
     font-size: bold;
@@ -115,7 +120,6 @@ body{
 
 .form__text{
     text-align: center;
-
 }
 
 .form__link{
