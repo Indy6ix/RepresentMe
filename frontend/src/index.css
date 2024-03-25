@@ -27,6 +27,7 @@ body{
   background: #ffffff;
 }
 
+
 .container,
 .form__input,
 .form__button,
@@ -146,4 +147,8 @@ body{
 .form__link:hover,
 .home_text_link:hover{
   text-decoration: underline;
+}
+
+.HomePage{
+  background:#ffffff;
 }
