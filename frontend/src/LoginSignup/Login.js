@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useNavigate } from 'react-router';
 import Register from "./Register";
 import axios from 'axios';
-import { setUserSession } from './service/AuthService';
+import { setUserSession } from '../service/AuthService';
 
 const loginAPIUrl = 'https://9oda7jj3w3.execute-api.us-east-2.amazonaws.com/prod/login';
 

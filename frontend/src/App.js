@@ -1,12 +1,15 @@
 import {BrowserRouter} from "react-router-dom";
 import {BrowserRouter as Router,  Routes,  Route} from "react-router-dom";
-import Home from "./Home";
-import Login from "./Login";
-import Register from "./Register";
-import HomePage from "./HomePage";
+import Home from "./LoginSignup/Home";
+import Login from "./LoginSignup/Login";
+import Register from "./LoginSignup/Register";
+import HomePage from "./Navigation/HomePage";
 import React, { useEffect, useState } from "react";
 import { getToken, getUser, setUserSession, resetUserSession } from "./service/AuthService";
 import axios from 'axios';
+import Bills from "./WebPages/Bills";
+import Profile from "./WebPages/Profile";
+import Representatives from "./WebPages/Representatives";
 
 const verifyTokenURL = 'https://9oda7jj3w3.execute-api.us-east-2.amazonaws.com/prod/verify';
 
@@ -55,6 +58,9 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/> 
           <Route path="/home-page" element={<HomePage/>}/> 
+          <Route path="/bills" element={<Bills/>}/>
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/representatives" element={<Representatives/>}/>
         </Routes>
       </div>
       </BrowserRouter>
