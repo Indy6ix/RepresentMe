@@ -19,7 +19,7 @@ export default function Representatives() {
       },[])
 
 
-      //console.log(members.members);
+      console.log(members.members);
       console.log(search);
     
     return(

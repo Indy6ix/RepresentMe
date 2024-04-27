@@ -18,7 +18,6 @@ export default function Bills() {
 
     console.log(workingBills.bills);
 
-   
     
     return(
         <>
