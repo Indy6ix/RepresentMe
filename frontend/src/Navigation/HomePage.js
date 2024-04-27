@@ -36,6 +36,7 @@ switch(window.location.pathname){
                 <h2 className='header-text-important'>Important Information</h2>
                     <p className='text'>The government API is making over 200 calls, so the data may take time to load! Please give the webpage approximately 30 seconds to 1 minute to load!</p>
                 <h2 className='header-text'>Documents</h2>
+                <a className='text' href="https://indy6ix.github.io/">Docments and more information about our project can be found here</a>
             </div>
         </>
     )
