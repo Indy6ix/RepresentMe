@@ -1,6 +1,5 @@
 import NavBar from '../Navigation/Navbar';
 import { useState, useEffect } from 'react';
-import "./BillStyle.css"
 
 export default function Bills() {
     const [workingBills, setWorkingBills] = useState({});

@@ -1,7 +1,6 @@
 import Bills from "../WebPages/Bills";
 import Profile from "../WebPages/Profile";
 import Representatives from "../WebPages/Representatives";
-import "./NavStyle.css";
 import { NavLink } from "react-router-dom";
 
 export default function NavBar(){

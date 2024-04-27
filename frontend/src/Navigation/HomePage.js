@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import NavBar from "./Navbar";
-import "./NavStyle.css"
 import Profile from '../WebPages/Profile';
 import Bills from '../WebPages/Bills';
 import Representatives from '../WebPages/Representatives';

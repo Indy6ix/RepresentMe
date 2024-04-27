@@ -1,6 +1,6 @@
 import NavBar from '../Navigation/Navbar';
 import { useState, useEffect } from 'react';
-import "./RepresentStyle.css"
+
 
 export default function Representatives() {
 

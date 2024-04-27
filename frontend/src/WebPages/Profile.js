@@ -3,7 +3,6 @@ import { getUser, resetUserSession } from '../service/AuthService';
 import { useNavigate } from 'react-router';
 import {NavLink, Route, Switch} from "react-router-dom";
 import NavBar from '../Navigation/Navbar';
-import "./ProfileStyle.css"
 
 function Profile(){
     const navigate = useNavigate();
