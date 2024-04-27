@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.image{
+    width: 200px;
+    height: 100%;
+    float: left;
+    border-radius: 10px;
+    border: 3px solid white;
+    margin-right: 20px;
+}
+
+
+.memberInfo{
+    align-content: center;
+    align-items: center;
+
+}
+
+
+.info{
+    display: flex;
+    min-height: 100vh;
+
+    flex-direction: column;
+    
+    margin: 100px;
+    width: 75%;
+
+
+}
+
+.name{
+    font-size: 30px;
+    padding: 5px;
+
+    
+}
+
+.state,
+.party,
+.district{
+    font-size: 22px;
+    padding: 5px;
+}
+
+.members{
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+   
+}
+
+.members:hover{
+    background-color: #0157ae;
+}

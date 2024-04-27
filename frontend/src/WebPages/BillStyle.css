@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.billInfo{
+    display: flex;
+
+    flex-direction: column;
+
+    margin: 100px auto;
+    width: 90%;
+
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.billInfo:hover{
+    background-color: #0157ae;
+}
+
+.billTitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.billDate,
+.billAction{
+    font-size: 18px;
+}

@@ -1,5 +1,6 @@
 import NavBar from '../Navigation/Navbar';
 import { useState, useEffect } from 'react';
+import "./RepresentStyle.css"
 
 export default function Representatives() {
 
@@ -34,18 +35,23 @@ export default function Representatives() {
     
     return(
         <> 
+     
              <NavBar />
              <h1>This is the Representatives Page!</h1>
-             <ul>
-              {members.members?.map((list, index) => (
-                <li key={index}>
-                  <img src={list.depiction.imageUrl} /> |
-                  | {list.name} | 
-                  | {list.state} |
-                  | {list.partyName} | 
-                </li>
+             <div className='info'>
+             {members.members?.map((list, index) => (
+                <h1 className='members' key={index}>
+                  <img className='image' src={list.depiction.imageUrl} /> 
+                  <div className='memberInfo'>
+                    <p className='name'>{list.name}</p>
+                    <p className='state'>{list.state}</p>
+                    <p className='party'>{list.partyName}</p>
+                    <p className='district'>District {list.district}</p>
+                  </div>
+                </h1>
               ))}
-            </ul>
+             </div>
         </>
     )
+    
 }
