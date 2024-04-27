@@ -59,3 +59,8 @@
 .members:hover{
     background-color: #0157ae;
 }
+
+.title{
+    color: #0157ae;
+    text-align: center;
+}
