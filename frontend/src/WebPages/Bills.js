@@ -31,7 +31,7 @@ export default function Bills() {
                     className='search'
                     type="text"
                     onChange={e=>setSearch(e.target.value)}
-                    placeholder='SEARCH FOR A BILL'
+                    placeholder='SEARCH FOR A BILL TO CHECK THE STATUS'
                 />    
              </div>
 
