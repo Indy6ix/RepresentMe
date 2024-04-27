@@ -4,6 +4,7 @@ import "./BillStyle.css"
 
 export default function Bills() {
     const [workingBills, setWorkingBills] = useState({});
+    const [search, setSearch] = useState('');
 
     const billsUrl = 'https://api.congress.gov/v3/bill?api_key=nIuacsJ4ncWVdPvHcXoCpRnG8ZzqQVaw8uzCibVm&limit=10';
 
@@ -22,9 +23,23 @@ export default function Bills() {
     return(
         <>
              <NavBar />
-             <h1>This is the Bills Page!</h1>
+             <div>
+        
 
-              {workingBills.bills?.map((list, index) => (
+             <div className='searchBar'>  
+                <input
+                    className='search'
+                    type="text"
+                    onChange={e=>setSearch(e.target.value)}
+                    placeholder='SEARCH FOR A BILL'
+                />    
+             </div>
+
+              {workingBills.bills?.filter((list)=>{
+                return search.toLowerCase() === '' ? list : list.title.
+                toLowerCase().includes(search) 
+              })
+              .map((list, index) => (
                 <div className='billInfo' key={index}>
                  <p className='billTitle'>
                     {list.title} 
@@ -37,7 +52,7 @@ export default function Bills() {
                 </p> 
                 </div>
               ))}
-       
+       </div>
         </>
     )
 }

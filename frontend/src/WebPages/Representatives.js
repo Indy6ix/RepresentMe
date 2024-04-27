@@ -4,21 +4,11 @@ import "./RepresentStyle.css"
 
 export default function Representatives() {
 
-    //all of the potential elements to be used 
-    const [members, setMembers] = useState( { 
-      bioguideId: "", 
-      depiction: {}, 
-      district: '', 
-      name: "", 
-      partyName:"",
-      state: "",
-      terms:"",
-      updateDate:"",
-      url:"" 
-    } );
-
-    //url for congress API
-    const congressUrl = 'https://api.congress.gov/v3/member?api_key=nIuacsJ4ncWVdPvHcXoCpRnG8ZzqQVaw8uzCibVm&limit=10';
+  const [members, setMembers] = useState({});
+  const [search, setSearch] = useState('');
+    
+  //url for congress API
+  const congressUrl = 'https://api.congress.gov/v3/member?api_key=nIuacsJ4ncWVdPvHcXoCpRnG8ZzqQVaw8uzCibVm&limit=10';
 
     //calls API
     useEffect(()=>{
@@ -28,18 +18,34 @@ export default function Representatives() {
         .catch(err => console.log(err))
       },[])
 
-    
 
-  console.log(members.members);
-
+      //console.log(members.members);
+      console.log(search);
     
     return(
         <> 
      
              <NavBar />
-             <h1>This is the Representatives Page!</h1>
+           
              <div className='info'>
-             {members.members?.map((list, index) => (
+             <h1 className='title'>
+                FIND YOUR REPRESENTATIVE
+            </h1>
+            
+             <div className='searchBar'>  
+                <input
+                    className='search'
+                    type="text"
+                    onChange={e=>setSearch(e.target.value)}
+                    placeholder='Type to search'
+                />    
+             </div>
+
+             {members.members?.filter((list)=>{
+              return search.toLowerCase() === '' ? list : list.state.
+              toLowerCase().includes(search) || list.name.toLowerCase().includes(search)
+             })
+             .map((list, index) => (
                 <h1 className='members' key={index}>
                   <img className='image' src={list.depiction.imageUrl} /> 
                   <div className='memberInfo'>
