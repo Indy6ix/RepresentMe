@@ -52,7 +52,7 @@ export default function Representatives() {
                     <p className='name'>{list.name}</p>
                     <p className='state'>{list.state}</p>
                     <p className='party'>{list.partyName}</p>
-                    <p className='district'>District {list.district}</p>
+                    <p className='district'>{list.district}</p>
                   </div>
                 </h1>
               ))}

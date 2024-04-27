@@ -49,3 +49,28 @@ body{
 .nav li:hover{
     background-color: #777;
 }
+
+.home-page{
+    margin: 50px;
+}
+
+.welcome{
+    font-size: 50px;
+    padding: 10px;
+}
+
+.text{
+    font-size: 20px;
+    padding: 10px;
+}
+
+.header-text{
+    font-size: 30px;
+    padding: 10px;
+}
+
+.header-text-important{
+    font-size: 30px;
+    padding: 10px;
+    color: #d42729;
+}
