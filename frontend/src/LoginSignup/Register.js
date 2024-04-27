@@ -45,7 +45,7 @@ const Register = () => {
 
 
     return(
-        <div class="container">
+        <div class="register">
         <form onSubmit={submitHandler} class="form" id="createAccount">
         <h1 class="form__title">Create Account</h1>
         <div class="form__message form__message--error"></div>

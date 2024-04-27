@@ -43,7 +43,7 @@ const Login = () => {
         }
 
     return(
-        <div class="container">
+        <div class="login">
         <form onSubmit={submitHandler} class="form" id="login">
         <h1 class="form__title">Login</h1>
         <div class="form__message form__message--error"></div>

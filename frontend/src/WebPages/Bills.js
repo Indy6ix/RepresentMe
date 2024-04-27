@@ -1,5 +1,6 @@
 import NavBar from '../Navigation/Navbar';
 import { useState, useEffect } from 'react';
+import "./BillStyle.css"
 
 export default function Bills() {
     const [workingBills, setWorkingBills] = useState({});
@@ -22,14 +23,21 @@ export default function Bills() {
         <>
              <NavBar />
              <h1>This is the Bills Page!</h1>
-             <ul>
+
               {workingBills.bills?.map((list, index) => (
-                <li key={index}>
-                  | {list.title} | 
-                  | {list.updateDate} |
-                </li>
+                <div className='billInfo' key={index}>
+                 <p className='billTitle'>
+                    {list.title} 
+                </p> 
+                <p className='billDate'>
+                    {list.updateDate} 
+                </p> 
+                <p className='billAction'>
+                    Status: {list.latestAction.text} 
+                </p> 
+                </div>
               ))}
-            </ul>
+       
         </>
     )
 }
