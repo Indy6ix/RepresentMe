@@ -6,7 +6,7 @@ export default function Bills() {
     const [workingBills, setWorkingBills] = useState({});
     const [search, setSearch] = useState('');
 
-    const billsUrl = 'https://api.congress.gov/v3/bill?api_key=nIuacsJ4ncWVdPvHcXoCpRnG8ZzqQVaw8uzCibVm&limit=10';
+    const billsUrl = 'https://api.congress.gov/v3/bill?api_key=nIuacsJ4ncWVdPvHcXoCpRnG8ZzqQVaw8uzCibVm&limit=250';
 
     //calls API
     useEffect(()=>{

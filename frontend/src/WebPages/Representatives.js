@@ -8,7 +8,7 @@ export default function Representatives() {
   const [search, setSearch] = useState('');
     
   //url for congress API
-  const congressUrl = 'https://api.congress.gov/v3/member?api_key=nIuacsJ4ncWVdPvHcXoCpRnG8ZzqQVaw8uzCibVm&limit=10';
+  const congressUrl = 'https://api.congress.gov/v3/member?api_key=nIuacsJ4ncWVdPvHcXoCpRnG8ZzqQVaw8uzCibVm&limit=250';
 
     //calls API
     useEffect(()=>{
@@ -37,7 +37,7 @@ export default function Representatives() {
                     className='search'
                     type="text"
                     onChange={e=>setSearch(e.target.value)}
-                    placeholder='Type to search'
+                    placeholder='Type a state or name'
                 />    
              </div>
 
@@ -47,7 +47,7 @@ export default function Representatives() {
              })
              .map((list, index) => (
                 <h1 className='members' key={index}>
-                  <img className='image' src={list.depiction.imageUrl} /> 
+                  <img className='image' src={list.depiction?.imageUrl} alt="image of representative" /> 
                   <div className='memberInfo'>
                     <p className='name'>{list.name}</p>
                     <p className='state'>{list.state}</p>
