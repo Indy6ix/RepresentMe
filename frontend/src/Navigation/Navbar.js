@@ -19,7 +19,7 @@ export default function NavBar(){
             </li>
 
             <li>
-                <NavLink to="/profile" element={<Profile/>} className="navlink">Profile</NavLink>
+                <NavLink to="/profile" element={<Profile/>} className="navlink">Logout</NavLink>
             </li>
         </ul>
         </nav>

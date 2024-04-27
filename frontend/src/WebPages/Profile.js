@@ -3,6 +3,7 @@ import { getUser, resetUserSession } from '../service/AuthService';
 import { useNavigate } from 'react-router';
 import {NavLink, Route, Switch} from "react-router-dom";
 import NavBar from '../Navigation/Navbar';
+import "./ProfileStyle.css"
 
 function Profile(){
     const navigate = useNavigate();
@@ -16,11 +17,14 @@ function Profile(){
     
     return(  
         <>
-           <NavBar />
-           <div>
-            <h1>This is the Profile page!</h1>
-            <input className="logoutButton" type="button" value="Logout" onClick={logoutHandler}/>
-        </div>
+        <NavBar />
+       
+            <div className='card'>
+                <h1 className='user-name-title'>Leaving so soon?</h1>
+                <input className="logoutButton" type="button" value="Logout" onClick={logoutHandler}/>
+            </div>
+
+  
         </>   
 
    
