@@ -1,6 +1,6 @@
 {
   "homepage": "https://imanigallen.github.io/RepresentMe",
-  "name": "frontend",
+  "name": "RepresentMe",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
